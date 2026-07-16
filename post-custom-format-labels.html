@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Format Labels — Serena Purslow</title>
+<meta name="description" content="Use the text editor in Tableau's Marks Card to customise chart labels so key values stand out.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand"><span class="dot"></span>Serena Purslow</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="blog.html" class="active">Tips &amp; Tricks</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap reveal in article">
+    <a href="blog.html" class="back-link">← Back to all tips</a>
+    <span class="viz-tag" style="background:var(--c-coral)">Tip</span>
+    <h1 style="margin-top:12px">Custom Format Labels</h1>
+    <p class="post-meta">Serena Purslow · 10 Apr 2025 · 1 min read</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <article class="article reveal in">
+
+      <p>Hey Tableau Community! Did you know that you can use the text editor in the Marks Card to customise the labels on your charts?</p>
+
+      <p>Adding marks to a chart in Tableau is a great way to call out and highlight key values, however unless we format these marks variables, they tend to fall flat.</p>
+
+      <p>Take this lovely donut chart - we want to call out a few values here, the % held by each category, and then the total they make up in the centre. However, the default formatting options don't look great, and don't help us highlight these numbers!</p>
+
+      <img class="shot" style="max-width:420px" src="https://static.wixstatic.com/media/b117b6_243472f29b4044e49a565a93d6c6b4de~mv2.png" alt="Donut chart with default label formatting">
+
+      <p>So, how do we customise our marks labels?</p>
+
+      <h2>How to do it:</h2>
+      <p>First we want to navigate to the label option on the Marks Card and select 'Label'. This will open up a tab with various options, but the one we want to select is the '...' next to the Text option:</p>
+
+      <img class="shot" style="max-width:320px" src="https://static.wixstatic.com/media/b117b6_cdce714c146e47729a0338a0d92de1a8~mv2.jpg" alt="Label text editor option on the Marks Card">
+
+      <p>This will open up a text editor in which you have lots of freedom to format your marks labels exactly as you like! You can play around with the font, sizing, and colouring of your labels, and you can apply these options differently to different elements on your labels! You can even type in extra text here if needed.</p>
+
+      <p>Transforming text like this:</p>
+      <img class="shot" style="max-width:280px" src="https://static.wixstatic.com/media/b117b6_2bad24b5c22942ef8e9d0a3874bc436a~mv2.png" alt="Default label text before formatting">
+
+      <p>To text like this:</p>
+      <img class="shot" style="max-width:280px" src="https://static.wixstatic.com/media/b117b6_a0ebd0b49d1c4dfdbcda724b672b4732~mv2.png" alt="Customised label text after formatting">
+
+      <p>By playing around with the text in this formatting box, we can update our donut chart labels from the basic Tableau settings, to some labels that actually stand out a bit!</p>
+
+      <img class="shot" style="max-width:420px" src="https://static.wixstatic.com/media/b117b6_e53b52468b85432caefb68c8f18f5d87~mv2.png" alt="Final donut chart with customised labels">
+
+      <p>I hope you find this trick useful! If you have any Tableau related questions feel free to let me know!</p>
+
+      <div class="related-row">
+        <a class="related-pill" href="post-add-comments-calculation.html">← Add Comments to Calculations</a>
+        <a class="related-pill" href="post-use-sign-function.html">Use the SIGN() function →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Serena Purslow. Built with a love of data (and no more Wix clunkiness).</div>
+</footer>
+
+<nav class="tabbar">
+  <a href="index.html"><svg viewBox="0 0 24 24"><path d="M12 2 2 10h3v10h6v-6h2v6h6V10h3L12 2Z"/></svg>Home</a>
+  <a href="portfolio.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>Portfolio</a>
+  <a href="blog.html" class="active"><svg viewBox="0 0 24 24"><path d="M6 2h12v20l-6-4-6 4V2Z"/></svg>Tips</a>
+  <a href="about.html"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6Z"/></svg>About</a>
+  <a href="index.html#contact"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>Contact</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

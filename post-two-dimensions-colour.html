@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add 2 Dimensions on Colour — Serena Purslow</title>
+<meta name="description" content="Colour a Tableau view by two dimensions at once without losing the first field, plus a Shift-drag shortcut.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand"><span class="dot"></span>Serena Purslow</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="blog.html" class="active">Tips &amp; Tricks</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap reveal in article">
+    <a href="blog.html" class="back-link">← Back to all tips</a>
+    <span class="viz-tag" style="background:var(--c-magenta)">Tip</span>
+    <h1 style="margin-top:12px">Add 2 Dimensions on Colour</h1>
+    <p class="post-meta">Serena Purslow · 2 Feb · 2 min read</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <article class="article reveal in">
+
+      <p>Hey Tableau Community!</p>
+
+      <p>Have you ever tried to colour a view by two different fields, only for Tableau to remove the first field as soon as you add the second? Super frustrating - especially when building scatter plots.</p>
+
+      <p>A common use case is wanting to highlight:</p>
+      <ul>
+        <li>Top 20 customers by <strong>Sales</strong></li>
+        <li>Top 20 customers by <strong>Profit</strong></li>
+        <li>And the customers who appear in <strong>both</strong> groups</li>
+      </ul>
+      <p>and to do this without creating complex calculations.</p>
+
+      <img class="shot" style="max-width:480px" src="https://static.wixstatic.com/media/b117b6_abd405f4b879413ca33745278da31592~mv2.png" alt="Scatter plot coloured by two dimensions">
+
+      <p>While Tableau only allows you to place one field directly on Colour at a time, there <em>is</em> a handy little hack you can use - as long as you're working with <strong>dimensions</strong>.</p>
+
+      <h2>How to Add Two Colours to the Marks Card 🎨</h2>
+
+      <p>This trick uses the <strong>Detail</strong> shelf as a stepping stone to combine two dimensions into one colour legend.</p>
+
+      <h3>Step 1: Create Your Dimensions</h3>
+      <p>Make sure both fields you want to colour by are <strong>dimensions</strong>, for example:</p>
+      <ul>
+        <li>Top 20 Customers by Sales (Yes / No)</li>
+        <li>Top 20 Customers by Profit (Yes / No)</li>
+      </ul>
+
+      <h3>Step 2: Add the First Dimension to Colour</h3>
+      <p>Drag your first field (e.g. <em>Top 20 Customers by Sales</em>) onto <strong>Colour</strong> on the Marks card. Your view will now be coloured by this field only.</p>
+      <img class="shot" src="https://static.wixstatic.com/media/b117b6_a3d56bd1139449e1988f66c176277ba0~mv2.png" alt="First dimension added to Colour">
+
+      <h3>Step 3: Add the Second Dimension to Detail</h3>
+      <p>Next, drag your second field (e.g. <em>Top 20 Customers by Profit</em>) onto <strong>Detail</strong> on the Marks card. Nothing will change visually just yet - that's expected!</p>
+      <img class="shot" src="https://static.wixstatic.com/media/b117b6_dd22fbefe9844d459bec6972ddf42970~mv2.png" alt="Second dimension added to Detail">
+
+      <h3>Step 4: Change Detail to Colour</h3>
+      <p>On the Marks card:</p>
+      <ul>
+        <li>Click the pill for <em>Top 20 Customers by Profit</em></li>
+        <li>Change it from <strong>Detail</strong> → <strong>Colour</strong></li>
+      </ul>
+      <img class="shot" src="https://static.wixstatic.com/media/b117b6_ea97d53dd25e43079203e99f26949a9c~mv2.png" alt="Changing the Detail pill to Colour">
+
+      <p>And that's it! Tableau now colours the marks using <strong>combinations of both dimensions</strong>.</p>
+      <img class="shot" style="max-width:480px" src="https://static.wixstatic.com/media/b117b6_4ae2b34451eb41f285e25f0fe6b9e14d~mv2.png" alt="Final scatter plot coloured by two combined dimensions">
+
+      <h2>What This Gives You</h2>
+      <p>You'll now see distinct colours for:</p>
+      <ul>
+        <li>Customers in the Top 20 by Sales only</li>
+        <li>Customers in the Top 20 by Profit only</li>
+        <li>Customers in <strong>both</strong> Top 20 lists</li>
+      </ul>
+      <p>Perfect for quickly spotting your most valuable customers in a scatter plot 📊</p>
+
+      <h2>Keyboard Hack Tip ⌨️</h2>
+      <p>Here's an even quicker shortcut: if you <strong>hold Shift</strong> while dragging your second dimension directly onto <strong>Colour</strong>, Tableau keeps the first dimension and creates the combination automatically.</p>
+      <p>No need to go through Detail first - a quick little keyboard trick that can save a step!</p>
+
+      <h2>Best Practice Tip 💡</h2>
+      <p>This technique is great for categorical flags like <em>Top N</em>, <em>Yes/No</em>, or <em>In/Out</em> logic!</p>
+
+      <p>I hope you find this trick useful! If you have any Tableau related questions feel free to let me know!</p>
+
+      <div class="related-row">
+        <a class="related-pill" href="post-drag-calculations.html">← Drag In/Out of Calculations</a>
+        <a class="related-pill" href="post-tore-levinson-date-variables.html">TinyTableauTip with Tore Levinson →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Serena Purslow. Built with a love of data (and no more Wix clunkiness).</div>
+</footer>
+
+<nav class="tabbar">
+  <a href="index.html"><svg viewBox="0 0 24 24"><path d="M12 2 2 10h3v10h6v-6h2v6h6V10h3L12 2Z"/></svg>Home</a>
+  <a href="portfolio.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>Portfolio</a>
+  <a href="blog.html" class="active"><svg viewBox="0 0 24 24"><path d="M6 2h12v20l-6-4-6 4V2Z"/></svg>Tips</a>
+  <a href="about.html"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6Z"/></svg>About</a>
+  <a href="index.html#contact"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>Contact</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>

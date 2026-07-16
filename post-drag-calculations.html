@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tableau Tip: Drag In/Out of Calculations — Serena Purslow</title>
+<meta name="description" content="Drag fields in and out of Tableau's calculation editor to test logic faster — a simple trick for building YTD calculations.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand"><span class="dot"></span>Serena Purslow</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="blog.html" class="active">Tips &amp; Tricks</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap reveal in article">
+    <a href="blog.html" class="back-link">← Back to all tips</a>
+    <span class="viz-tag" style="background:var(--c-blue)">Tip</span>
+    <h1 style="margin-top:12px">Tableau Tip: Drag In/Out of Calculations</h1>
+    <p class="post-meta">Serena Purslow · 16 Feb · 2 min read</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <article class="article reveal in">
+
+      <p>Hey Tableau Community! 👋</p>
+
+      <p>Have you ever been building a calculation in Tableau and thought… "I just want to quickly test this bit without closing the calculation every five seconds."</p>
+
+      <p>Maybe you're creating something like <strong>YTD Profit</strong>, and you're not 100% sure your logic is right yet. You want to experiment, tweak pieces, and test parts of it - but constantly opening and closing the calculation box slows everything down.</p>
+
+      <p>There's a super simple trick that makes this so much easier 👇</p>
+
+      <h2>Drag Fields In and Out of the Calculation Box ✨</h2>
+
+      <p>Yes - you can drag and drop fields directly <strong>into</strong> and <strong>out of</strong> the calculation editor. It makes building and testing calculations much more intuitive.</p>
+
+      <p>Let's walk through it using a YTD Profit example. You want to create a <strong>Year-to-Date Profit</strong> calculation, but you're still figuring out:</p>
+
+      <ul>
+        <li>How you want to structure the date logic</li>
+        <li>Whether your aggregation is correct</li>
+        <li>If the numbers are returning what you expect</li>
+      </ul>
+
+      <p>Instead of guessing and reopening the calculation repeatedly, here's what you can do.</p>
+
+      <h3>Step 1: Drag Fields Into the Calculation</h3>
+
+      <p>While your calculation editor is open:</p>
+      <ul>
+        <li>Drag a field directly from your <strong>Data Pane</strong> or <strong>View</strong></li>
+        <li>Drop it straight into the calculation box</li>
+      </ul>
+
+      <video controls muted playsinline src="https://video.wixstatic.com/video/b117b6_a6ac978c87604cec89144f421993fb79/1080p/mp4/file.mp4"></video>
+
+      <p>Tableau will automatically bring it in using the same structure as your view. For example:</p>
+      <ul>
+        <li>If your field is already aggregated in the view, it will come in <strong>pre-aggregated</strong></li>
+        <li>If it's a date, it will come in using the same <strong>date format/structure</strong> (e.g. YEAR, MONTH, exact date)</li>
+      </ul>
+
+      <p>This saves time and reduces errors - especially when working with date logic for YTD calculations.</p>
+
+      <h3>Step 2: Drag Parts Out to Test Them</h3>
+
+      <p>You can highlight part of your calculation and <strong>drag it out onto the view</strong>. For example:</p>
+      <ul>
+        <li>Test just your date logic</li>
+        <li>Test your aggregation</li>
+        <li>Check if a condition is returning True/False correctly</li>
+      </ul>
+
+      <video controls muted playsinline src="https://video.wixstatic.com/video/b117b6_342d255746ed463ca53d8efa600ed42a/1080p/mp4/file.mp4"></video>
+
+      <p>By dropping that piece onto Rows, Columns, or Text, you can instantly validate whether it's working, without closing the calculation window.</p>
+
+      <h2>Why This Is So Useful 💡</h2>
+
+      <p>Instead of: Close calculation → Add field to view → Reopen calculation → Edit → Repeat...</p>
+      <p>You can: Drag in → Drag out → Test → Adjust</p>
+
+      <p>This removes the back-and-forth frustration and makes creating calculations feel much more intuitive and interactive.</p>
+
+      <p>I hope you find this one useful! 😊 If you have any Tableau-related questions (or favourite productivity hacks), feel free to let me know!</p>
+
+      <div class="related-row">
+        <a class="related-pill" href="post-two-dimensions-colour.html">Next: Add 2 Dimensions on Colour →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Serena Purslow. Built with a love of data (and no more Wix clunkiness).</div>
+</footer>
+
+<nav class="tabbar">
+  <a href="index.html"><svg viewBox="0 0 24 24"><path d="M12 2 2 10h3v10h6v-6h2v6h6V10h3L12 2Z"/></svg>Home</a>
+  <a href="portfolio.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>Portfolio</a>
+  <a href="blog.html" class="active"><svg viewBox="0 0 24 24"><path d="M6 2h12v20l-6-4-6 4V2Z"/></svg>Tips</a>
+  <a href="about.html"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6Z"/></svg>About</a>
+  <a href="index.html#contact"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>Contact</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
