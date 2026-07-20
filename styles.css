@@ -512,7 +512,7 @@ button{font-family:inherit;}
   border:0;
 }
 .back-link{
-  display:inline-flex;
+  display:flex;
   align-items:center;
   gap:6px;
   font-weight:700;
