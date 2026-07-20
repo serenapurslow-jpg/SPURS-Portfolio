@@ -42,7 +42,7 @@
 
     <article class="article reveal in">
 
-      <p>Hey Tableau Community! 👋 If you’ve taken a look at my Visual Vocabulary, you’ll know how much I love using different chart types to effectively tell a story with data. Today, we’re looking at one of the best charts for illustrating flow: the Funnel Chart.</p>
+      <p>Hey Tableau Community! 👋 If you’ve taken a look at my <strong>Visual Vocabulary</strong>, you’ll know how much I love using different chart types to effectively tell a story with data. Today, we’re looking at one of the best charts for illustrating flow: <strong>the Funnel Chart</strong>.</p>
       <p>Funnel charts map how data moves through a restrictive, step-by-step process, tapering down at each level. They are fantastic for showing drop-off rates in sales pipelines, recruitment processes, or customer journeys—assuming there's no non-linear backtracking!</p>
       <p>There are a few ways to build funnel charts in Tableau, but this area-and-circle dual-axis method creates a clean, polished finish.</p>
       <p>Let's walk through how to build it! 👇</p>      
@@ -52,52 +52,52 @@
       
       <h3>Step 1: Set Up Your Initial View</h3>
       <ul>
-        <li>Bring your dimension (e.g., Pipeline Stage) onto Rows.</li>
-        <li>Drag Measure Values onto Columns.</li>
+        <li>Bring your dimension (e.g., Pipeline Stage) onto <strong>Rows</strong>.</li>
+        <li>Drag <strong>Measure Values</strong> onto <strong>Columns</strong>.</li>
         <li>Inside the Measure Values card, keep your measure (e.g., Number of Opportunities) and add an additional/dummy measure, which we’ll swap out later.</li>
       </ul>
 
-            <img class="shot" style="max-width:420px" src="P1.png" alt="Set up initial view">
+            <img class="shot" style="max-width:630px" src="P1.png" alt="Set up initial view">
 
       <h3>Step 2: Flip the Measure Axis</h3>
       <p>To create that symmetrical, centered funnel shape, we need the measure to mirror itself across a zero axis. We can do this my making 2 versions of the same measure - 1 negative and 1 positive.</p>
       <ul>
-        <li>Double-click on your measure field in the Measure Values shelf.</li>
+        <li>Double-click on your measure field in the <strong>Measure Values</strong> shelf.</li>
         <li>Type a - right before the field name to make it negative.</li>
       </ul>
 
-            <img class="shot" style="max-width:420px" src="P2.png" alt="Flip measure axis">
+            <img class="shot" style="max-width:630px" src="P2.png" alt="Flip measure axis">
       
     <h3>Step 3: Add the Positive Measure Back in</h3>
       <p>Now we need the positive half of our funnel!</p>
       <ul>
-        <li>Drag the non-negative version of your measure (Number of Opportunities) back into the Measure Values shelf.</li>
+        <li>Drag the non-negative version of your measure (Number of Opportunities) back into the <strong>Measure Values</strong> shelf.</li>
         <li>Remove your placeholder/dummy measure.</li>
       </ul>
       <p>You should now be left with two instances of your measure in the Measure Values shelf—one positive and one negative.</p> 
 
-            <img class="shot" style="max-width:420px" src="P3.png" alt="Add in positive measure">
+            <img class="shot" style="max-width:630px" src="P3.png" alt="Add in positive measure">
       
   <h3>Step 4: Duplicate and Change Mark Types</h3>
       <ul>
-        <li>Hold Ctrl (or Cmd on Mac) and drag Measure Values in the Columns shelf to duplicate it right next to itself.</li>
-        <li>On your Marks card, set the first Measure Values mark type to Area.</li>
-        <li>Set the second Measure Values mark type to Circle.</li>
-        <li>Place your dimension (Pipeline Stage) onto Color for the Circle marks card only.</li>
+        <li>Hold Ctrl (or Cmd on Mac) and drag <strong>Measure Values</strong> in the Columns shelf to duplicate it right next to itself.</li>
+        <li>On your Marks card, set the first Measure Values mark type to <strong>Area</strong>.</li>
+        <li>Set the <strong>second</strong> Measure Values mark type to <strong>Circle</strong>.</li>
+        <li>Place your dimension (Pipeline Stage) onto <strong>Colour</strong> for the <strong>Circle marks card only</strong>.</li>
       </ul>
 
-            <img class="shot" style="max-width:420px" src="P4.png" alt="Duplicate measure and change mark types">
+            <img class="shot" style="max-width:630px" src="P4.png" alt="Duplicate measure and change mark types">
 
  <h3>Step 5: Dual-Axis and Format</h3>
       <p>To bring it all together:</p>
       <ul>
-        <li>Right-click the second Measure Values pill on the Columns shelf and select Dual Axis.</li>
-        <li>Right-click the top axis and select Synchronize Axis.</li>
+        <li>Right-click the second <strong>Measure Values</strong> pill on the Columns shelf and select <strong>Dual Axis</strong>.</li>
+        <li>Right-click the top axis and select <strong>Synchronise Axis</strong>.</li>
         <li>Hide the top and bottom header axes, adjust your colors, and format your tooltips.</li>
       </ul>
       <p>And voila! 🎨 You have a smooth, beautifully centered funnel chart that clearly visualizes drop-off rates across your stages.</p> 
 
-            <img class="shot" style="max-width:420px" src="Final Product.png" alt="Voila!">
+            <img class="shot" style="max-width:630px" src="Final Product.png" alt="Voila!">
       
   <h2>Why This Works So Well 💡</h2>
       <p>By using an Area chart split by negative and positive values, Tableau smoothly bridges the drop-off from one stage to the next. Adding the Circle marks on a dual axis gives distinct visual anchor points at each stage, making the transition between levels look polished and modern!</p>
@@ -106,8 +106,8 @@
 
 
       <div class="related-row">
-        <a class="related-pill" href="post-drag-calculations.html">← Drag in/out of Calculations</a>
-    <!--    <a class="related-pill" href="NEXT-POST-FILENAME.html">Next post title →</a>     -->
+        <a class="related-pill" href="post-drag-calculations.html">Next post title →</a>
+    <!--    <a class="related-pill" href="NEXT-POST-FILENAME.html">← Drag in/out of Calculations</a>     -->
       </div>
     </article>
   </div>
