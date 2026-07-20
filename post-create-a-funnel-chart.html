@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create a Funnel Chart — Serena Purslow</title>
+<meta name="description" content="Learn how to create a simple Funnel Chart in Tableau">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand"><span class="dot"></span>Serena Purslow</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="about.html">About</a>
+      <a href="blog.html" class="active">Tips &amp; Tricks</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <a href="index.html#contact" class="nav-cta">Get in touch</a>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap reveal in article">
+    <a href="blog.html" class="back-link">← Back to all tips</a>
+    <span class="viz-tag" style="background:var(--c-teal)">Tip</span>
+    <h1 style="margin-top:12px">Create a Funnel Chart</h1>
+    <p class="post-meta">Serena Purslow · 20 July 2026 · 3 min read</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+
+    <article class="article reveal in">
+
+      <p>Hey Tableau Community! 👋 If you’ve taken a look at my Visual Vocabulary, you’ll know how much I love using different chart types to effectively tell a story with data. Today, we’re looking at one of the best charts for illustrating flow: the Funnel Chart.</p>
+      <p>Funnel charts map how data moves through a restrictive, step-by-step process, tapering down at each level. They are fantastic for showing drop-off rates in sales pipelines, recruitment processes, or customer journeys—assuming there's no non-linear backtracking!</p>
+      <p>There are a few ways to build funnel charts in Tableau, but this area-and-circle dual-axis method creates a clean, polished finish.</p>
+      <p>Let's walk through how to build it! 👇</p>      
+      
+      <h2>How to Build a Centered Funnel Chart ✨</h2>
+      <p>We'll use a standard sales pipeline example, mapping Pipeline Stage against Number of Opportunities.</p>
+      
+      <h3>Step 1: Set Up Your Initial View</h3>
+      <ul>
+        <li>Bring your dimension (e.g., Pipeline Stage) onto Rows.</li>
+        <li>Drag Measure Values onto Columns.</li>
+        <li>Inside the Measure Values card, keep your measure (e.g., Number of Opportunities) and add an additional/dummy measure, which we’ll swap out later.</li>
+      </ul>
+
+            <img class="shot" style="max-width:420px" src="https://static.wixstatic.com/media/YOUR-IMAGE-ID~mv2.png" alt="Describe the image">
+
+      <h3>Step 2: Flip the Measure Axis</h3>
+      <p>To create that symmetrical, centered funnel shape, we need the measure to mirror itself across a zero axis. We can do this my making 2 versions of the same measure - 1 negative and 1 positive.</p>
+      <ul>
+        <li>Double-click on your measure field in the Measure Values shelf.</li>
+        <li>Type a - right before the field name to make it negative.</li>
+      </ul>
+
+        <h3>Step 3: Add the Positive Measure Back in</h3>
+      <p>Now we need the positive half of our funnel!</p>
+      <ul>
+        <li>Drag the non-negative version of your measure (Number of Opportunities) back into the Measure Values shelf.</li>
+        <li>Remove your placeholder/dummy measure.</li>
+      </ul>
+      <p>You should now be left with two instances of your measure in the Measure Values shelf—one positive and one negative.</p> 
+
+  <h3>Step 4: Duplicate and Change Mark Types</h3>
+      <ul>
+        <li>Hold Ctrl (or Cmd on Mac) and drag Measure Values in the Columns shelf to duplicate it right next to itself.</li>
+        <li>On your Marks card, set the first Measure Values mark type to Area.</li>
+        <li>Set the second Measure Values mark type to Circle.</li>
+        <li>Place your dimension (Pipeline Stage) onto Color for the Circle marks card only.</li>
+      </ul>
+
+ <h3>Step 5: Dual-Axis and Format</h3>
+      <p>To bring it all together:</p>
+      <ul>
+        <li>Right-click the second Measure Values pill on the Columns shelf and select Dual Axis.</li>
+        <li>Right-click the top axis and select Synchronize Axis.</li>
+        <li>Hide the top and bottom header axes, adjust your colors, and format your tooltips.</li>
+      </ul>
+      <p>And voila! 🎨 You have a smooth, beautifully centered funnel chart that clearly visualizes drop-off rates across your stages.</p> 
+
+  <h2>Why This Works So Well 💡</h2>
+      <p>By using an Area chart split by negative and positive values, Tableau smoothly bridges the drop-off from one stage to the next. Adding the Circle marks on a dual axis gives distinct visual anchor points at each stage, making the transition between levels look polished and modern!</p>
+      <p>I hope you find this tip useful for your next dashboard project! 😊 If you have any Tableau-related questions (or your own favorite chart tweaks), feel free to let me know!</p>
+      
+
+
+      <div class="related-row">
+        <a class="related-pill" href="post-drag-calculations.html">← Drag in/out of Calculations</a>
+    <!--    <a class="related-pill" href="NEXT-POST-FILENAME.html">Next post title →</a>     -->
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Serena Purslow. Built with a love of data.</div>
+</footer>
+
+<nav class="tabbar">
+  <a href="index.html"><svg viewBox="0 0 24 24"><path d="M12 2 2 10h3v10h6v-6h2v6h6V10h3L12 2Z"/></svg>Home</a>
+  <a href="portfolio.html"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1.5"/><rect x="13" y="3" width="8" height="8" rx="1.5"/><rect x="3" y="13" width="8" height="8" rx="1.5"/><rect x="13" y="13" width="8" height="8" rx="1.5"/></svg>Portfolio</a>
+  <a href="blog.html" class="active"><svg viewBox="0 0 24 24"><path d="M6 2h12v20l-6-4-6 4V2Z"/></svg>Tips</a>
+  <a href="about.html"><svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4 0-8 2-8 6v2h16v-2c0-4-4-6-8-6Z"/></svg>About</a>
+  <a href="index.html#contact"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H10l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>Contact</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
